@@ -1,0 +1,40 @@
+{
+ "_how": "Intro plan. source/audio/audio_offset/sfx come from stems.py. start/end = source seconds of the dialogue (end runs ~0.5 s past the last word: that pause is the silence before the drop). subs = [start, end, text] in source seconds, wording from official subtitles, one caption per speaker turn (intro.py fails the build otherwise). crop_bottom = share of the frame with burned-in subtitles to cut away. edit = the rendered edit to join.",
+ "name": "example",
+ "source": "clips/intro/purple.mp4",
+ "audio": "clips/intro/purple.vocals.wav",
+ "audio_offset": 12.0,
+ "crop_bottom": 0.2,
+ "start": 14.0,
+ "end": 26.0,
+ "subs": [
+  [
+   15.5,
+   17.5,
+   "Take the amplified and the reversal,"
+  ],
+  [
+   17.5,
+   20.25,
+   "then smash together those two different expressions"
+  ],
+  [
+   20.5,
+   23.0,
+   "of infinity to create and push out imaginary mass."
+  ],
+  [
+   23.25,
+   25.5,
+   "Imaginary Technique: Purple."
+  ]
+ ],
+ "edit": "out/example-edit.mp4",
+ "sfx": {
+  "audio": "clips/intro/purple.score.wav",
+  "offset": 12.0,
+  "start": 25.35,
+  "dur": 1.6,
+  "gain_db": 0
+ }
+}

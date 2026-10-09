@@ -1,0 +1,15 @@
+# media never goes in the repo: songs, footage, stems and renders stay on your machine
+song/
+clips/
+out/
+*.mp4
+*.m4a
+*.mp3
+*.wav
+*.webm
+*.jpg
+*.png
+__pycache__/
+*.pyc
+.venv/
+.DS_Store

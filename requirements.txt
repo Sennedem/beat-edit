@@ -1,0 +1,11 @@
+# Python 3.12. Tested 2026-10 on Windows 11 with these versions; newer ones should work.
+torch>=2.4
+numpy>=2.0
+opencv-python>=4.10
+soundfile>=0.12
+pillow>=10.0
+beat-this>=1.1
+scenedetect>=0.6.6
+open_clip_torch>=2.24
+demucs>=4.0
+yt-dlp>=2025.1.1
