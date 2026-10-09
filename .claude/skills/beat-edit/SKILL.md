@@ -6,7 +6,8 @@ description: Make a TikTok/Reels/Shorts "beat edit" from a song and anime (or an
 # beat-edit
 
 You make the whole video. The user picks the song, approves the story, and watches the result; they never edit.
-Every script lives in the repo root and is run from there. Read `references/lessons.md` before the first run in a
+Every script lives in the repo root and is run from there with the repo's Python environment (`.venv`; if
+`python -c "import open_clip"` fails, activate it or run `.venv/Scripts/python` / `.venv/bin/python` directly). Read `references/lessons.md` before the first run in a
 session: it holds every mistake already made, and each one cost a full render to find.
 
 ## Definition of done
@@ -20,8 +21,9 @@ slot (step 9) and told the user what you checked and what only they can judge (t
 
 **1. Song.** Ask for the master file (WAV/MP3) and put it in `song/`. No master? Apple's free 30 s preview works for a
 draft: `https://itunes.apple.com/lookup?id=<artist id>&entity=song&limit=50` lists `previewUrl` per track.
-Run `python beatmap.py song/<file>`. It writes `song/<file>.beatmap.json` (bpm, downbeats, drop candidates) and a
-mono WAV next to the source. Pick the section: 8 bars (≈ 15 s at 130 BPM) starting on a downbeat where the beat
+Run `python beatmap.py song/<file>`. It writes `song/<stem>.beatmap.json` (bpm, downbeats, drop candidates),
+`song/<stem>.song.wav` (full-quality stereo: this is the plan's `audio`) and a mono copy for the beat tracker, and
+prints the two plan lines. Pick the section: 8 bars (≈ 15 s at 130 BPM) starting on a downbeat where the beat
 hits hardest; the first drop candidate is usually right. That start is the `drop`.
 
 **2. Story (ask, then confirm).** One fight, told before -> after: the intro is the line right before the payoff,
