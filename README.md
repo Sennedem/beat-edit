@@ -107,6 +107,7 @@ music. Your main account stays clean.
 | You see | Do this |
 |---|---|
 | `python` or `ffmpeg` is not recognized | Close the terminal, open a new one. Still broken: reinstall step 1. |
+| `running scripts is disabled on this system` (Windows, when turning the environment on) | Run `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`, answer `Y`, then turn it on again. |
 | `No module named ...` | You forgot to turn the environment on (`.venv\Scripts\activate` / `source .venv/bin/activate`). |
 | The first edit sits still for minutes | It is downloading the AI models (about 1 GB, once). |
 | `uncaptioned speech` or `caption ... spans a pause` | A caption doesn't match who is talking. Tell Claude; it fixes the captions. |
